@@ -6,52 +6,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Regis | Interpreter - Translator</title>
+    <link rel="stylesheet" href="bulma.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <nav>
+    <nav class="top-nav">
+        <div class="start">
+            <a href="">LOGO</a>
+        </div>
         <div class="end">
             <ul>
                 <li>Home</li>
-                <li>About Me</li>
+                <li>About</li>
                 <li>Services</li>
                 <li>Reference</li>
                 <li>Language</li>
             </ul>
+
+            <div class="ham">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
         </div>
     </nav>
 
     <section class="landing">
-        <div class="intro">
-            <div class="who">
-                <p class="iam"> I am </p>
-                <h1 class="name"> Mr. Rejis </h1>
-                <h2 class="job"> Transltor and Interprator </h2>
-            </div>
-            <div class="languages">
-                <p>Proficient In:</p>
-                <div class="flags">
-                    <div class="flag">
-                        <img src="./images/svgs/french.svg" alt="">
-                        <p></p>
-                    </div>
-                    <div class="flag">
-                        <img src="./images/swahili.png" alt="">
-                        <p></p>
-                    </div>
-                    <div class="flag">
-                        <img src="./images/svgs/rwanda.svg" alt="">
-                        <p></p>
-                    </div>
-                    <div class="flag">
-                        <img src="./images/svgs/burundi.svg" alt="">
-                        <p></p>
+        <div class="intro-container">
+            <div class="intro">
+                <div class="who">
+                    <p class="iam"> I am </p>
+                    <h1 class="name"> Mr. Rejis Ngabirano </h1>
+                    <h2 class="job"> Translator and Interpreter </h2>
+                </div>
+                <div class="languages">
+                    <p>Proficient In:</p>
+                    <div class="flags">
+                        <div class="flag">
+                            <img src="./images/svgs/french.svg" alt="">
+                            <p>French</p>
+                        </div>
+                        <div class="flag">
+                            <img src="./images/swahili.png" alt="">
+                            <p>Swahili</p>
+                        </div>
+                        <div class="flag">
+                            <img src="./images/svgs/rwanda.svg" alt="">
+                            <p>Kinyarwanda</p>
+                        </div>
+                        <div class="flag">
+                            <img src="./images/svgs/burundi.svg" alt="">
+                            <p>Kiburundi</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="picture">\
+        <div class="picture">
             <div class="frame">
                 <img src="./images/regis.png" alt="">
             </div>
@@ -59,19 +71,26 @@
     </section>
     <section class="about-me">
         <h1>About Me</h1>
-        <div>
-            <p>My name is Regis Ngabirano and I am a passionate and experienced translator and conference interpreter
-                based
-                in Kenya. I specialize in corporate communication (marketing, law and business) and IT & Big Data,
-                Localization, working with the following language combination:
-            </p>
+        <div class="flex">
+            <img src="./images/a.jpg" alt="">
             <div>
-                <ul>
-                    <li>English - French </li>
-                    <li>English - Kirundi / Kinyarwanda</li>
-                    <li>French - Kirundi / Kinyarwanda</li>
-                    <li>French - Swahili</li>
-                </ul>
+                <p>I am a passionate and experienced translator and conference interpreter
+                    based
+                    in Kenya. I specialize in corporate communication (marketing, law and business) and IT & Big Data,
+                    Localization, working with the following language combination:
+                </p>
+                <div>
+                    <ul>
+                        <li>English - French </li>
+                        <li>English - Kirundi / Kinyarwanda</li>
+                        <li>French - Kirundi / Kinyarwanda</li>
+                        <li>French - Swahili</li>
+                    </ul>
+                </div>
+    
+                <div class="message">
+                    <a href="" class="message-btn">Get your Quotation</a>
+                </div>
             </div>
         </div>
     </section>
@@ -137,6 +156,13 @@
             </div>
         </div>
     </section>
+
+    <script>
+        const ham = document.querySelector('.ham');
+        ham.addEventListener('click', () => {
+            ham.classList.toggle('active');
+        })
+    </script>
 </body>
 
 </html>
