@@ -21,7 +21,7 @@ body {
 }
 
 body.loading >*:not(.lds-roller){
-    visibility: hidden;
+    display: none;
 }
 
 ul {
