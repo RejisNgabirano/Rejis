@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body>
+<body class="loading">
     <nav class="top-nav">
         <div class="veil"></div>
         <div class="start">
@@ -40,7 +40,16 @@
             </div>
         </div>
     </nav>
-
+    <div class="lds-roller">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
     <section class="landing" id="landing">
         <div class="intro-container">
             <div class="intro">
@@ -573,9 +582,15 @@
 
         AOS.init();
 
+        const lds_roller = document.querySelector(".lds-roller");
+        const body = document.querySelector('.loading');
+
 
         window.addEventListener("load", function () {
-            document.getElementById("box").style.display = "block";
+            lds_roller.style.display = "none";
+            body.classList.remove('loading');
+
+            document.getElementById("box").style.display = "block";            
         });
         const testimonials = [
             {
