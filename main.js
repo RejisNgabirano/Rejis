@@ -70,7 +70,7 @@ function toggle(element) {
     element.nextElementSibling.classList.toggle('hidden');
 }
 
-function displayTestimonial() {
+let displayTestimonial = () => {
     testimonialContainer.innerHTML = `
         <p>${testimonials[i].testimonial}</p>
          <img src=${testimonials[i].image}></img>
@@ -84,7 +84,9 @@ document.addEventListener('load', () => {
     lds_roller.style.display = "none";
     body.classList.remove('loading');
 
-    
+
     document.getElementById("box").style.display = "block";
     displayTestimonial();
 });
+
+window.onload = displayTestimonial;
