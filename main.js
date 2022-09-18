@@ -125,7 +125,7 @@ window.onscroll = () => {
 
     sections.forEach((section) => {
         const sectionTop = section.offsetTop;
-        if (pageYOffset >= sectionTop - 250) {
+        if (pageYOffset >= sectionTop - 400) {
             current = "#" + section.getAttribute("id");
         }
     });

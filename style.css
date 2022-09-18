@@ -121,6 +121,7 @@ a:hover {
     align-items: center;
 }
 
+
 .intro-container {
     width: 100%;
     height: 100%;
@@ -200,7 +201,7 @@ a:hover {
 .about-me {
     width: 100vw;
     min-height: 400px;
-    padding: 8vh 1vw 8vh 2vw;
+    padding: 5vh 1vw 5vh 2vw;
     position: relative;
 
     background-color: var(--cooler-white);
@@ -267,7 +268,7 @@ a:hover {
 }
 
 .why-me {
-    padding: 8vh 0;
+    padding: 5vh 0;
 }
 
 .why-me h1 {
@@ -444,7 +445,7 @@ a:hover {
 
 /* Services */
 .services {
-    padding: 8vh 0;
+    padding: 5vh 0;
     background-color: var(--cooler-white);
 }
 
@@ -638,7 +639,7 @@ a:hover {
 }
 
 .portfolio {
-    padding: 8vh 0;
+    padding: 5vh 0;
 }
 
 .carousel {
@@ -759,7 +760,7 @@ a:hover {
 }
 
 .references {
-    padding: 8vh 0;
+    padding: 5vh 0;
     background-color: var(--cooler-white);
 }
 
@@ -859,7 +860,7 @@ button#prev {
 
 /* Feedback */
 .feedback {
-    padding: 8vh 0;
+    padding: 5vh 0;
 }
 
 .feedback h1 {
@@ -1256,20 +1257,17 @@ footer {
         position: sticky;
 
         width: 100%;
-
+        display: grid;
+        place-items: center;
         height: 100%;
-
-        left: 0;
-        margin: 0;
-        padding: 0;
         z-index: -2;
+        top: 0;
+        margin-bottom: 40px;
     }
 
     .picture .frame {
-
-        margin: auto;
+        margin: 0;
         padding: 0;
-        margin-top: 5%;
     }
 
     .iam {
@@ -1281,14 +1279,13 @@ footer {
     }
 
     .job {
-        font-size: x-large;
+        width: 100%;
+        font-size: larger;
     }
 
     .flags {
-        column-gap: 15px;
-        row-gap: 0;
-        max-width: 200px;
         justify-content: space-between;
+        width: auto;
     }
 
     .flag img {
