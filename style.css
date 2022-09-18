@@ -90,6 +90,41 @@ a:hover {
     transition: width 0.5s ease;
 }
 
+.languages-change {
+    position: relative;
+
+    isolation: isolate;
+    z-index: 1;
+}
+
+.languages-list {
+    display: none;
+    position: absolute;
+    padding-top: 1rem;
+    left: 0;
+    box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.2);
+    color: var(--accent);
+
+    height: fit-content;
+    border-radius: 3px;
+    z-index: -1;
+}
+
+.languages-change:hover .languages-list,
+.languages-change:focus .languages-list{
+    display: block;
+}
+
+.languages-list>* {
+    margin-top: 5px;
+    padding-left: 5px;
+    font-size: 14px;
+}
+
+.languages-list *:hover {
+    color: initial;
+    cursor: pointer;
+}
 
 .end {
     margin-left: auto;
@@ -1236,6 +1271,18 @@ footer {
 
     .ham.active .bar:last-child {
         rotate: -45deg;
+    }
+
+    .languages-list{
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: white;
+        padding: 0.5rem;
+    }
+
+    .languages-list > *{
+        font-size: medium;
+        margin-bottom: 20px;
     }
 
     .intro {
