@@ -111,7 +111,7 @@ a:hover {
 }
 
 .languages-change:hover .languages-list,
-.languages-change:focus .languages-list{
+.languages-change:focus .languages-list {
     display: block;
 }
 
@@ -1269,14 +1269,14 @@ footer {
         rotate: -45deg;
     }
 
-    .languages-list{
+    .languages-list {
         left: 50%;
         transform: translateX(-50%);
         background-color: white;
         padding: 0.5rem;
     }
 
-    .languages-list > *{
+    .languages-list>* {
         font-size: medium;
         margin-bottom: 20px;
     }
@@ -1327,14 +1327,19 @@ footer {
     }
 
     .flags {
-        width: 300px;
-        height: 180px;
         justify-content: space-between;
-        width: auto;
+        gap: 0;
+        width: 205px;
+        gap: 5px;
+        height: fit-content;
+    }
+
+    .flag {
+        width: 100px;
+        text-align: center;
     }
 
     .flag img {
-        background-color: #030303;
         width: 80px;
         height: 50px;
     }
