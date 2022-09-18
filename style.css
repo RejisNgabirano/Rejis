@@ -230,7 +230,7 @@ a:hover {
 }
 
 .frame img {
-    rotate: -9deg;
+    transform: rotate(-9deg);
 }
 
 .about-me {
@@ -1051,16 +1051,12 @@ footer {
     float: left;
     font-size: 14px;
     word-spacing: 2px;
-    padding-left: 5vw;
     text-transform: capitalize;
 }
 
 .footer-bottom small {
-    position: absolute;
-    font-size: 12px;
-    margin-top: 3px;
-    right: 5vw;
-    margin-right: auto;
+    float: right;
+    padding-right: 1vw;
 }
 
 .footer-bottom p a {
@@ -1331,6 +1327,8 @@ footer {
     }
 
     .flags {
+        width: 300px;
+        height: 180px;
         justify-content: space-between;
         width: auto;
     }
