@@ -29,7 +29,7 @@ function sleep(ms) {
 
 
 function AutoSlideScroll() {
-    console.log(slideIndex);
+    // console.log(slideIndex);
     if (slideIndex >= slides.length - 1) { slideIndex = slides.length - 1; }
     else if (slideIndex <= 0) { slideIndex = 0; };
 
@@ -72,7 +72,7 @@ async function InitializeSlides() {
             else { directionForward = false; };
         }
     }
-    console.log('Done sliding for now');
+    // console.log('Done sliding for now');
 }
 
 InitializeSlides();
@@ -103,7 +103,7 @@ LButton.addEventListener('click', () => {
 
     manualSlideScroll();
     slideIndex--;
-    console.log('clicked');
+    // console.log('clicked');
 });
 
 RButton.addEventListener('click', () => {
@@ -112,6 +112,6 @@ RButton.addEventListener('click', () => {
 
     manualSlideScroll();
     slideIndex++;
-    console.log('clicked');
+    // console.log('clicked');
 });
 

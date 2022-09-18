@@ -2,13 +2,26 @@ const ham = document.querySelector(".ham");
 const toggles = document.querySelectorAll('.toggle');
 const veil = document.querySelector('.veil');
 const menu = document.getElementById('menu');
+const nav_links = document.querySelectorAll('.nav-link');
+const sections = document.querySelectorAll('section');
 
 const lds_roller = document.querySelector(".lds-roller");
 const body = document.querySelector('.loading');
 
-let i = 0; // current slide
-let j = testimonials.length; // total slides
 let testimonialContainer = document.getElementById("testimonial-container");
+
+const window_width = window.innerWidth > 0 ? window.innerWidth : screen.width;
+const pictureEl = document.querySelector('.picture');
+
+
+
+if (window_width <= 768) {
+    document.addEventListener('scroll', () => {
+        var scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
+        pictureEl.style.top = "-" + scrollTop / 1.8 + "px";
+    });
+}
+
 
 
 const testimonials = [
@@ -42,11 +55,28 @@ const testimonials = [
     }
 ];
 
+let i = 0; // current slide
+let j = testimonials.length; // total slides
+
 
 ham.addEventListener('click', () => {
     ham.classList.toggle('active');
     veil.classList.toggle('active');
     menu.classList.toggle('active');
+});
+
+nav_links.forEach((nav_link) => {
+    nav_link.addEventListener('click', (e) => {
+        if (ham.classList.contains('active')) {
+            ham.classList.remove('active');
+            veil.classList.remove('active');
+            menu.classList.remove('active');
+        }
+
+        var active_link = menu.querySelector('.active');
+        active_link.classList.remove('active');
+        e.target.parentElement.classList.add('active');
+    });
 });
 
 
@@ -90,3 +120,20 @@ document.addEventListener('load', () => {
 });
 
 window.onload = displayTestimonial;
+window.onscroll = () => {
+    var current = "";
+
+    sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        if (pageYOffset >= sectionTop - 250) {
+            current = "#" + section.getAttribute("id");
+        }
+    });
+
+    nav_links.forEach((li) => {
+        li.classList.remove("active");
+        if (li.classList.contains(current)) {
+            li.classList.add("active");
+        }
+    });
+}
