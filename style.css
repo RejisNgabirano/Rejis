@@ -15,10 +15,13 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     overflow-x: hidden;
     width: 100vw;
-    scroll-behavior: smooth;
 }
 
 
@@ -1294,6 +1297,7 @@ footer {
         scale: 1;
         gap: 0;
         flex-direction: column-reverse;
+        position: relative;
     }
 
     .picture {
@@ -1305,12 +1309,17 @@ footer {
         height: 100%;
         z-index: -2;
         top: 0;
-        margin-bottom: 40px;
     }
 
     .picture .frame {
         margin: 0;
         padding: 0;
+        margin-top: 40px;
+    }
+
+    .frame img{
+        width: 250px;
+        height: 250px;
     }
 
     .iam {
@@ -1342,11 +1351,6 @@ footer {
     .flag img {
         width: 80px;
         height: 50px;
-    }
-
-    .frame img {
-        width: 400px;
-        height: 400px;
     }
 
     .languages {
