@@ -226,7 +226,7 @@ a:hover {
 }
 
 .frame {
-    margin-top: 15%;
+    margin-top: 8%;
     border-radius: 50%;
     width: fit-content;
     overflow: hidden;
@@ -292,6 +292,9 @@ a:hover {
 
 .message {
     margin-top: 20px;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .message-btn {
@@ -308,7 +311,6 @@ a:hover {
 .proz{
     border-color: #262626;
     color: #262626;
-    margin-left: 10px;
 }
 
 .proz:hover{
