@@ -305,6 +305,19 @@ a:hover {
     color: var(--cooler-white);
 }
 
+.proz{
+    border-color: #262626;
+    color: #262626;
+    margin-left: 10px;
+}
+
+.proz:hover{
+    border-image: linear-gradient(to right, #252525, #4a4a4a) 1 100%;
+    color: var(--accent);
+    background-image: linear-gradient(to bottom right, #252525, #4a4a4a);
+    color: var(--cooler-white);
+}
+
 .why-me {
     padding: 5vh 0;
 }
@@ -724,8 +737,8 @@ a:hover {
     max-width: 100vw;
     height: 400px;
     max-height: 80vh;
-    object-fit: cover;
-    object-position: top;
+    object-fit: contain;
+    object-position: center;
 }
 
 .carousel__button {
