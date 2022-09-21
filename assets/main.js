@@ -100,6 +100,30 @@ function toggle(element) {
     element.nextElementSibling.classList.toggle('hidden');
 }
 
+
+function sendMail() {
+    var username = "Website User";
+    if (document.getElementById('username').value !== '') {
+        username = document.getElementById('username').value;
+    }
+    var params = {
+        from_name: username,
+        email_id: document.getElementById('email').value,
+        message: document.getElementById('message').value,
+    }
+    emailjs.send('service_7bvtxat', 'template_d2rp364', params).then(function (res) {
+        alert('Email Sent ' + res.status);
+    })
+}
+
+function openWhatsApp() {
+    var name = document.getElementById('username').value;
+    var msg = document.getElementById('message').value;
+    var sMsg = encodeURIComponent("Hi this is " + name + " " + msg);
+    var whatsapp_url = "whatsapp://send?phone=254798936038&text=" + sMsg;
+    window.location.href = whatsapp_url;
+}
+
 let displayTestimonial = () => {
     testimonialContainer.innerHTML = `
         <p>${testimonials[i].testimonial}</p>

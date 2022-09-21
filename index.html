@@ -14,6 +14,15 @@
     <link rel="manifest" href="assets/images/icons/site.webmanifest">
 
     <script src="assets/aos.js"></script>
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('uTaa7xzoPfrgZTZ6G');
+        })();
+    </script>
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -38,7 +47,7 @@
                         <div class="french" id="french">French</div>
                         <div class="swahili" id="swahili">Swahili</div>
                         <div class="kinyarwanda" id="kinyarwanda">Kinyarwanda</div>
-                        <div class="kiburundi" id="kiburundi">Kiburundi</div>
+                        <div class="kiburundi" id="kiburundi">Kirundi</div>
                     </div>
                 </li>
             </ul>
@@ -75,7 +84,7 @@
                         </div>
                         <div class="flag" data-aos="fade-right" data-aos-delay="800">
                             <img src="assets/images/svgs/burundi.svg" alt="">
-                            <p>Kiburundi</p>
+                            <p>Kirundi</p>
                         </div>
                     </div>
                 </div>
@@ -90,7 +99,7 @@
     <section class="about-me" id="about">
         <h1>About Me</h1>
         <div class="flex">
-            <img src="assets/images/a.jpg" alt="" data-aos="fade-up" data-aos-duration="500">
+            <img src="assets/images/a.webp" alt="" data-aos="fade-up" data-aos-duration="500">
             <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
                 <p>I am a passionate and experienced translator and conference interpreter
                     based
@@ -108,7 +117,8 @@
 
                 <div class="message">
                     <a href="#contact" class="message-btn">Get your Quotation</a>
-                    <a href="http://www.proz.com/profile/1559885" class="message-btn proz" target="_blank">View on Proz.com</a>
+                    <a href="http://www.proz.com/profile/1559885" class="message-btn proz" target="_blank">View on
+                        Proz.com</a>
                 </div>
             </div>
         </div>
@@ -508,9 +518,13 @@
     <section class="feedback" id="contact">
         <h1>Contact Me</h1>
         <div class="email-div" data-aos="fade-up" data-aos-duration="1000">
-            <div class="form">
+            <div class="form" id="contact-form">
                 <div class="form-div">
-                    <label for="email" class="form-input-label">Your Email:</label>
+                    <label for="username" class="form-input-label" name="user_name" id="username">Your Username:</label>
+                    <input type="text" placeholder="Optional" id="email" required>
+                </div>
+                <div class="form-div">
+                    <label for="email" class="form-input-label" name="user_email">Your Email:</label>
                     <input type="text" placeholder="someone@domain.com" id="email">
                 </div>
                 <div class="form-div">
@@ -521,9 +535,9 @@
             </div>
 
             <div class="action-buttons">
-                <button class="shop-now">Send Email</button>
+                <button class="shop-now" onclick="sendMail()">Send Email</button>
                 or
-                <button class="duse">WhatsApp</button>
+                <button class="duse" onclick="openWhatsApp()">WhatsApp</button>
             </div>
         </div>
     </section>

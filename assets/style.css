@@ -973,10 +973,23 @@ button#prev {
     border: 1px solid #0A9396;
 }
 
+.duse:hover{
+    background-color: #005F73;
+    border-color: #005F73;
+    color: var(--cooler-white);
+    cursor: pointer;
+}
+
 .shop-now {
     color: var(--cooler-white);
     background-color: var(--accent);
     border: 2px solid var(--accent);
+}
+
+.shop-now:hover{
+    cursor: pointer;
+    background-color: var(--cooler-white);
+    color: var(--accent);
 }
 
 /* Footer */
